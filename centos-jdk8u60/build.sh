@@ -1,2 +1,2 @@
 #!/bin/sh
-docker build -t centos-jdk8u60 .
+docker build -t habam/centos6.7-jdk8u60 .
