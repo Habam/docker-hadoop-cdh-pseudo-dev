@@ -6,7 +6,7 @@ RUN yum clean all \
 && gosu hdfs hdfs namenode -format
 
 # According to https://github.com/docker/docker/issues/7056, replace CDH setting
-COPY hdfs.conf /etc/security/limits.d/hdfs.conf
+COPY cdh.limits /etc/security/limits.d/
 
 # Step 2: Start HDFS
 # Step 3: Create the directories needed for Hadoop processes.
@@ -15,6 +15,7 @@ RUN for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do service $x start ; done \
 && for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do service $x stop ; done
 
 COPY startup.sh /root/
+RUN chmod +x /root/startup.sh
 ENTRYPOINT ["/root/startup.sh"]
 
 EXPOSE 8020 8088 50070
