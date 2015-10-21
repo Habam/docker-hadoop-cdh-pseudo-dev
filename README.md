@@ -7,4 +7,6 @@
 4. Hadoop in pseudo-distributed mode
 
 ## How to run docker container
+```
 docker run -d --name hadoop-pseudo habam/cdh5-hadoop-pseudo
+```
