@@ -5,6 +5,11 @@
 2. JDK 8u60
 3. CDH latest
 4. Hadoop in pseudo-distributed mode
+- ZooKeeper
+- HDFS
+- YARN
+- HBase
+- Spark
 
 ## How to run docker container
 ```
