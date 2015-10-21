@@ -5,4 +5,9 @@ RUN yum clean all \
 && yum install -y hadoop-conf-pseudo \
 && gosu hdfs hdfs namenode -format \
 && for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do service $x start ; done \
-&& /usr/lib/hadoop/libexec/init-hdfs.sh
+&& /usr/lib/hadoop/libexec/init-hdfs.sh \
+&& service hadoop-yarn-resourcemanager start \
+&& service hadoop-yarn-nodemanager start \
+&& service hadoop-mapreduce-historyserver start
+
+EXPOSE 8020 8088 50070
