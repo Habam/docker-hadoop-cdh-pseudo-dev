@@ -14,7 +14,7 @@ RUN for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do service $x start ; done \
 && /usr/lib/hadoop/libexec/init-hdfs.sh \
 && for x in `cd /etc/init.d ; ls hadoop-hdfs-*` ; do service $x stop ; done
 
-COPY startup.sh /root
+COPY startup.sh /root/
 ENTRYPOINT ["/root/startup.sh"]
 
 EXPOSE 8020 8088 50070
