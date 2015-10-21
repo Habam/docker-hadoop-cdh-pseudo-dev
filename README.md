@@ -8,5 +8,10 @@
 
 ## How to run docker container
 ```
-docker run -d --name hadoop-pseudo habam/cdh5-hadoop-pseudo
+docker run -d --name hadoop-pseudo -p 8020:8020 -p 8088:8088 -p 50070:50070 habam/cdh5-hadoop-pseudo
+```
+
+## How to attach a running container
+```
+docker exec -ti ${CONTAINER ID} bash
 ```
