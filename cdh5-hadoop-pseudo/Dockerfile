@@ -18,4 +18,3 @@ COPY startup.sh /
 ENTRYPOINT ["/startup.sh"]
 
 EXPOSE 8020 8088 50070
-~                             
