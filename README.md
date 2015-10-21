@@ -5,4 +5,6 @@
 2. JDK 8u60
 3. CDH latest
 4. Hadoop in pseudo-distributed mode
-5. 
+
+## How to run docker container
+docker run -d --name hadoop-pseudo habam/cdh5-hadoop-pseudo
