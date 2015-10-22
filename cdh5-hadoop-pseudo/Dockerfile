@@ -18,4 +18,4 @@ COPY startup.sh /root/
 RUN chmod +x /root/startup.sh
 ENTRYPOINT ["/root/startup.sh"]
 
-EXPOSE 8020 8088 50070
+EXPOSE 8020 8042 8088 19888 50010 50070 50075 
