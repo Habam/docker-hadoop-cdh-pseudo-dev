@@ -12,7 +12,7 @@
   - Spark
 
 ## How to build your local docker images from raw Dockerfile
-run ```build.sh``` in each folder 
+Run ```build.sh``` in each folder 
 
 ## How to run docker container
 ```
