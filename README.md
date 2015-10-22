@@ -11,6 +11,9 @@
   - HBase
   - Spark
 
+## How to build your local docker images from raw Dockerfile
+run ```build.sh``` in each folder 
+
 ## How to run docker container
 ```
 docker run -d --name hadoop-pseudo -p 8020:8020 -p 8088:8088 -p 50070:50070 habam/cdh5-hadoop-pseudo
